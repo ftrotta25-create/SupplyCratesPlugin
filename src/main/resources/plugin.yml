@@ -9,5 +9,5 @@ softdepend: [MateSystemPlugin]
 commands:
   supplycrate:
     description: Comandos de Supply Crates
-    usage: /supplycrate <spawn|lista>
+    usage: /supplycrate <spawn|aqui|lista>
     permission: supplycrates.admin

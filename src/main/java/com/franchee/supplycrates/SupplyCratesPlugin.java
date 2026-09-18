@@ -7,6 +7,7 @@ import com.franchee.supplycrates.util.CrateManager;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -70,6 +71,16 @@ public class SupplyCratesPlugin extends JavaPlugin {
                     sender.sendMessage("Crate spawneada en " + ubicacion.getBlockX() + ", "
                             + ubicacion.getBlockY() + ", " + ubicacion.getBlockZ());
                 }
+                return true;
+            }
+            case "aqui" -> {
+                if (!(sender instanceof Player jugador)) {
+                    sender.sendMessage("Este comando solo lo puede usar un jugador (necesita saber donde estás parado).");
+                    return true;
+                }
+                Location ubicacion = crateManager.spawnearEn(jugador.getLocation());
+                sender.sendMessage("Crate spawneada en tu ubicación: " + ubicacion.getBlockX() + ", "
+                        + ubicacion.getBlockY() + ", " + ubicacion.getBlockZ());
                 return true;
             }
             case "lista" -> {

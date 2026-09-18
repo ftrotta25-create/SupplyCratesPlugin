@@ -71,6 +71,24 @@ public class CrateManager {
         return ubicacion;
     }
 
+    /**
+     * Coloca una crate exactamente en la ubicacion dada (sin buscar
+     * random), ajustando al bloque de encima del suelo bajo esa
+     * posicion. Usado por /supplycrate aqui.
+     */
+    public Location spawnearEn(Location ubicacionJugador) {
+        World mundo = ubicacionJugador.getWorld();
+        if (mundo == null) return null;
+
+        int x = ubicacionJugador.getBlockX();
+        int z = ubicacionJugador.getBlockZ();
+        int y = ubicacionJugador.getBlockY();
+
+        Location ubicacion = new Location(mundo, x + 0.5, y, z + 0.5);
+        colocarCrate(ubicacion);
+        return ubicacion;
+    }
+
     private void colocarCrate(Location ubicacion) {
         Block bloque = ubicacion.getBlock();
         bloque.setType(Material.CHEST);

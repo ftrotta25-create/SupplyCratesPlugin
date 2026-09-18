@@ -20,8 +20,12 @@ arranque del server (nada de netherite ni diamante encantado).
 
 ## Comandos
 
-- `/supplycrate spawn` — fuerza el spawn de una crate ya (admin, para
-  testear o para eventos puntuales).
+- `/supplycrate spawn` — fuerza el spawn de una crate ya, en un punto
+  random del mapa (admin, para testear o para eventos puntuales).
+- `/supplycrate aqui` — spawnea una crate justo donde estás parado
+  (esta sí ignora `radio`/`centroX`/`centroZ`, va exactamente a tu
+  ubicación). Cuenta para el límite de `crateSimultaneasMax` igual que
+  las automáticas.
 - `/supplycrate lista` — cuántas crates hay activas ahora mismo.
 
 ## Loot
