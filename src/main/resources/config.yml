@@ -1,0 +1,19 @@
+# Cada cuanto aparece una tanda de crates nuevas.
+intervaloMinutos: 20
+
+# Cuantas crates activas puede haber al mismo tiempo como maximo.
+# Si ya hay tantas afuera, se salta el spawn de esa tanda.
+crateSimultaneasMax: 3
+
+# Mundo, centro y radio dentro del cual aparecen (en bloques).
+mundo: world
+centroX: 0
+centroZ: 0
+radio: 500
+
+# Cuantos items random le tocan a cada crate.
+itemsPorCrate: 4
+
+# Si nadie la abre en este tiempo, desaparece (tirando el loot al piso
+# para no perderlo del todo).
+tiempoExpiracionMinutos: 20

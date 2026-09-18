@@ -1,0 +1,13 @@
+name: SupplyCratesPlugin
+version: 1.0.0
+main: com.franchee.supplycrates.SupplyCratesPlugin
+api-version: '1.20'
+author: Franchee
+description: Supply Crates que caen/aparecen random en el mapa con loot variado, no OP, para el arranque del server.
+softdepend: [MateSystemPlugin]
+
+commands:
+  supplycrate:
+    description: Comandos de Supply Crates
+    usage: /supplycrate <spawn|lista>
+    permission: supplycrates.admin
